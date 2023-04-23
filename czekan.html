@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Pamiętaj swoje imię!</title>
+		<meta charset="utf-8">
+		<style>
+			p.tytul {
+			 color: darkcyan;
+			 text-align: center;
+			 }
+		</style>
+	</head>
+	<body>
+		<p>Imię: Teo</p>
+		<script>
+			alert('strona zawiera pliki cookies!')
+			const paragraf = document.querySelector('p');
+			paragraf.addEventListener('click', zmienNazwe);
+			function zmienNazwe() {
+				const name = prompt('Podaj imię na które chcesz zmienić')
+				paragraf.textContent = `Imię: ${name}`;
+				document.cookie='jujujujuju'
+				alert(document.cookie)
+			}
+		</script>
+	</body>
+</html>
